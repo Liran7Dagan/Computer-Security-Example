@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html dir="ltr">
+<head><title>Dashboard - Customer Management</title></head>
+<body>
+    <h2>Add a New Customer</h2>
+    {% if message %}
+        <h3 style="color: green;">{{ message | safe }}</h3>
+    {% endif %}
+    <form method="POST" action="/dashboard">
+        <label>Customer Name:</label><br>
+        <input type="text" name="full_name" required><br><br>
+        <label>Additional Details (e.g., sector or data plan):</label><br>
+        <textarea name="details" rows="4" cols="30"></textarea><br><br>
+        <button type="submit">Add Customer</button>
+    </form>
+</body>
+</html>
